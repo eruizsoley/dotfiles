@@ -4,7 +4,7 @@ MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_c
 local return_status="%{$fg[red]%}%(?..⏎)%{$reset_color%}"
 
 PROMPT='%{$fg[blue]%} Naggurn%{$reset_color%}%{$fg_bold[white]%} </> %{$reset_color%}%{$fg[cyan]%}%~:%{$reset_color%}$(git_time_since_commit)$(git_prompt_info)
-%{$fg[yellow]%}%!%{$reset_color%} $(prompt_char) '
+%{$fg[red]%}%!%{$reset_color%} $(prompt_char) '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[green]%}git%{$reset_color%}@%{$fg[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%})"

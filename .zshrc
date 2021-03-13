@@ -117,7 +117,6 @@ alias ys="yarn start"
 alias yi="yarn ios"
 alias rni="npx react-native init"
 alias nrn="npx react-native run-ios"
-alias bs="browser-sync start --server --files '*.html, css/*.css, *.js'"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

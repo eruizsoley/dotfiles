@@ -92,6 +92,17 @@ snippet tst
 	this.state.${1};
 
 # Component
+snippet com
+	import React from 'react';
+
+	export default function ${1:ComponentName}(){
+		return(
+			<>
+				<p>${2}</p>
+			</>
+				)
+	}
+
 snippet raf
 	const ${1:ComponentName} = (${2:props}) => {
 		${3:state}

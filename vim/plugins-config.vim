@@ -1,7 +1,9 @@
 " Auto relload web
+
 let g:ChromeDevTools_host = '/Users/ernestruiz/Code/html/index.html'
 
 " Closetag config
+
 let g:closetag_filenames = '*.html, *.xhtml, *.phtml, *.jsx, *.js'
 
 " COC

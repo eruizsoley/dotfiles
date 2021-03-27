@@ -187,4 +187,4 @@ let g:tagbar_indent = 1
 let g:tagbar_autoshowtag = 1
 let g:tagbar_width = 25
 let g:tagbar_position = 'left'
-autocmd FileType python,jsx,javascript,html,css TagbarOpen
+autocmd FileType python,jsx,javascript,html,css,javascriptreact TagbarOpen

@@ -4,7 +4,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ernestruiz/.oh-my-zsh"
-export BAT_THEME="Dracula"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -117,7 +116,6 @@ alias ys="yarn start"
 alias yi="yarn ios"
 alias rni="npx react-native init"
 alias nrn="npx react-native run-ios"
-alias bs="browser-sync start --server --files '*.html, *.css, *.js'"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

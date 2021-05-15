@@ -1,56 +1,3 @@
-" Keymap
-
-let mapleader='ñ'
-nmap <leader>e <Plug>(easymotion-s2)
-nmap <leader>n :NERDTreeToggle <CR>
-nmap <leader>s :TagbarToggle<CR>
-nmap <leader>w :w<CR>
-nmap <leader>q :q<CR>
-nnoremap cc ciw
-nmap <leader>d <Plug>DashSearch
-nnoremap <leader>dd :bd<CR>
-nmap <leader>t :split term://zsh <CR>
-
-" Keymap Git Fugitive
-
-nmap <leader>G :G<CR>
-nmap <leader>gp :Gpush<CR>
-nnoremap <leader>gb :BlamerToggle<CR>
-
-" Remap escape
-
-inoremap jk <Esc>
-inoremap kj <Esc>
-inoremap jj <Esc>
-inoremap kk <Esc>
-
-" Resize
-
-nnoremap <leader>z 10<C-w>>
-nnoremap <leader>< 10<C-w><
-
-" Use ctrl-[hjkl] to select the active split!
-
-nnoremap <C-h> <C-W><C-H>
-nnoremap <C-j> <C-W><C-J>
-nnoremap <C-k> <C-W><C-K>
-nnoremap <C-l> <C-W><C-L>
-
-" Tab navigation
-
-nnoremap <TAB> :bnext<CR>
-nnoremap <S-Tab> :bprev<CR>
-
-" faster scrolling
-nnoremap <silent> <C-f> 10<C-y>
-
-" Fuzzy
-
-nnoremap <leader>f :Files<CR>
-nnoremap <leader>g :GFiles<CR>
-nnoremap <leader>r :RG<CR>
-nnoremap <leader>b :Buffers<CR>
-
 " GoTo code navigation.
 
 nmap <silent> gd <Plug>(coc-definition)
@@ -68,11 +15,39 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <leader>c :Commentary<CR>
 vnoremap <leader>c :Commentary<CR>
 
-" Map extras
+nnoremap <CR> :noh<CR><CR>
 
-inoremap $3 =><esc>a
-inoremap $4 () => {}<esc>i
-inoremap $5 {<esc>o}<esc>O
+let mapleader = " "
+nnoremap cc ciw
+map <leader>s :w<CR>
+map <leader>' :q<CR>
+map <leader>n :Vexplore<CR>
 
-inoremap <C-j> <Left>
-inoremap <C-k> <Right>
+map <leader>v :vsplit<CR>
+map <leader>h :split<CR>
+
+nnoremap <C-o> 10<C-e>
+nnoremap <C-e> 10<C-y>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-t> <C-w>j
+nnoremap <C-n> <C-w>k
+nnoremap <C-s> <C-w>l
+
+" Dual simbols
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+" map extras
+inoremap $% =><esc>a
+inoremap $^ () => {}<esc>i
+
+" ctlrp & buffers
+map <leader>dd :bdelete<CR>
+map <leader><TAB> :bNext<CR>
+nnoremap<space><space> :CtrlP<CR> 

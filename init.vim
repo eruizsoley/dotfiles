@@ -25,55 +25,84 @@ so ~/.config/nvim/vim/plugins.vim
 so ~/.config/nvim/vim/map.vim
 so ~/.config/nvim/vim/plugins-config.vim
 
-" General Settings
-" Do not worry too much about what this does, I don't havea clue either :^)
+" Use Vim settings, rather than Vi settings
+set nocompatible
 
-filetype plugin indent on
-syntax on
-set mouse=a
-set numberwidth=1
-set clipboard=unnamedplus
-set relativenumber
-set cursorline
-set undofile
-set undodir=~/.config/nvim/undodir
-set encoding=utf-8
-set tabstop=2
-set expandtab
-set autoindent
-set shiftwidth=2
-set scrolloff=3
-set showcmd
-set hidden
-set wildmenu
-set visualbell
-set splitbelow
-set ttyfast
-set ruler
+" Read file when modified outside Vim
+set autoread
+
+" Do not keep any history
+set viminfo='0,:0,<0,@0,f0
+set nobackup
+set nowb
+set noswapfile
+
+" Allow backspacing over everything in INSERT mode
 set backspace=indent,eol,start
-set number
+
+" Show ruler and command visual aid
+set ruler
+set showcmd
+
+" Disable bells
+set noerrorbells
+set novisualbell
+set t_vb=
+
+" Set partial search and result highlighting
+set incsearch
+set hlsearch
+
+" Ignore case when searching
 set ignorecase
 set smartcase
-set gdefault
-set incsearch
+
+" Show matching bracets
 set showmatch
-set hlsearch
-set wrap
-set linebreak
-set nolist
-set shortmess+=c
 
-" Theme
+" Highlight the cursor line
+set cursorline
 
-if (has("nvim"))
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-
+" Set the colorscheme and window tansparency
 set background=dark
 set t_Co=256
+set termguicolors
 colorscheme tender
 
-let g:airline_theme = "codedark"
+" Set default vertical split to right
+set splitright
+
+" Set soft tabs
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" Indent
+set ai
+set si
+
+" Show invisibles
+set hidden
+set listchars=tab:▸\ ,trail:·
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+" Undo
+set undofile
+set undodir=~/.vim/undodir
+
+" Show line number and listchars
+set list
+set nu
+set number
+set numberwidth=1
+set relativenumber
+
+set wildmenu
+syntax on
+set encoding=utf-8
+set wrap
+set textwidth=79
+set scrolloff=3
+set laststatus=2

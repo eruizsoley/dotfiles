@@ -105,8 +105,9 @@ export LANG=es_ES.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias v="nvim"
-alias -s txt="nvim"
 alias sv="sudo nvim"
+alias ll="ls -alF"
+alias la="ls -A"
 alias ga="git add"
 alias gc="git commit -m"
 alias gst="git status"

@@ -12,15 +12,15 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " vim-commentary
 
-nnoremap <leader>c :Commentary<CR>
-vnoremap <leader>c :Commentary<CR>
+nnoremap gc :Commentary<CR>
+vnoremap gc :Commentary<CR>
 
 nnoremap <CR> :noh<CR><CR>
 
-let mapleader = " "
+let mapleader = ","
 nnoremap cc ciw
 map <leader>s :w<CR>
-map <leader>' :q<CR>
+map <leader>k :q<CR>
 map <leader>n :Vexplore<CR>
 
 map <leader>v :vsplit<CR>

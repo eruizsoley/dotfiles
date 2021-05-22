@@ -79,7 +79,7 @@ set softtabstop=2
 set expandtab
 
 " Indent
-set ai
+set autoindent
 set si
 
 " Show invisibles

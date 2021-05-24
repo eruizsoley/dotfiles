@@ -40,6 +40,7 @@ end)
 local applicationHotkeys = {
   b = 'Google Chrome',
   i = 'iTerm',
+  d = 'Simulator.app'
 }
 for key, app in pairs(applicationHotkeys) do
   hs.hotkey.bind(hyper, key, function()

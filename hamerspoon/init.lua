@@ -28,12 +28,12 @@ end)
 hs.hotkey.bind(hyper, "c", function()
   local win = hs.window.focusedWindow();
   if not win then return end
-win:moveToUnit(hs.layout.right75)
+win:moveToUnit(hs.layout.right70)
 end)
 hs.hotkey.bind(hyper, "g", function()
   local win = hs.window.focusedWindow();
   if not win then return end
-win:moveToUnit(hs.layout.left75)
+win:moveToUnit(hs.layout.left70)
 end)
 
 

@@ -11,6 +11,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'honza/vim-snippets'
 
 " Aesthetics
-Plug 'jacoborus/tender.vim'
+Plug 'morhetz/gruvbox'
 
 call plug#end()

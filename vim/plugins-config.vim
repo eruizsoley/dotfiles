@@ -46,10 +46,13 @@ let g:coc_snippet_prev = '<S-Tab>'
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 
 " Change Netrw tree mode
+let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 15
 let g:netrw_altv = 1
 augroup ProjectDrawer
 autocmd!
-autocmd VimEnter * :Explore
+autocmd VimEnter * :Lexplore
 augroup END
 autocmd FileType netrw setl bufhidden=wipe

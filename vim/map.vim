@@ -21,7 +21,7 @@ let mapleader = ","
 nnoremap cc ciw
 map <leader>s :w<CR>
 map <leader>k :q<CR>
-map <leader>n :Explore<CR>
+map <leader>n :Lexplore<CR>
 
 map <leader>v :vsplit<CR>
 map <leader>h :split<CR>

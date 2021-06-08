@@ -51,3 +51,7 @@ inoremap $^ () => {}<esc>i
 map <leader>dd :bdelete<CR>
 map <leader><TAB> :bNext<CR>
 nnoremap<space><space> :CtrlP<CR> 
+
+noremap t j
+noremap n k
+noremap s l

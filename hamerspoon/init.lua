@@ -10,32 +10,31 @@ hs.hotkey.bind(hyper, "h", function()
   if not win then return end
 win:moveToUnit(hs.layout.left50)
 end)
-hs.hotkey.bind(hyper, "t", function()
+hs.hotkey.bind(hyper, "j", function()
   local win = hs.window.focusedWindow();
   if not win then return end
 win:moveToUnit(hs.layout.maximized)
 end)
-hs.hotkey.bind(hyper, "n", function()
+hs.hotkey.bind(hyper, "k", function()
   local win = hs.window.focusedWindow();
   if not win then return end
 win:moveToScreen(win:screen():next())
 end)
-hs.hotkey.bind(hyper, "s", function()
+hs.hotkey.bind(hyper, "l", function()
   local win = hs.window.focusedWindow();
   if not win then return end
 win:moveToUnit(hs.layout.right50)
 end)
-hs.hotkey.bind(hyper, "c", function()
+hs.hotkey.bind(hyper, "p", function()
   local win = hs.window.focusedWindow();
   if not win then return end
 win:moveToUnit(hs.layout.right70)
 end)
-hs.hotkey.bind(hyper, "g", function()
+hs.hotkey.bind(hyper, "o", function()
   local win = hs.window.focusedWindow();
   if not win then return end
 win:moveToUnit(hs.layout.left70)
 end)
-
 
 local applicationHotkeys = {
   b = 'Google Chrome',
@@ -53,4 +52,9 @@ expose_app = hs.expose.new(nil,{onlyActiveApplication=true})
 expose_space = hs.expose.new(nil,{includeOtherSpaces=false})
 expose_browsers = hs.expose.new{'Safari','Google Chrome'}
 hs.hotkey.bind(hyper, "e", "Expose",function()expose:toggleShow()end)
-hs.hotkey.bind(hyper, "u", "App Expose",function()expose_app:toggleShow()end)
+hs.hotkey.bind(hyper, "f", "App Expose",function()expose_app:toggleShow()end)
+
+-- hs.hotkey.bind(hyper, "x", function()
+--   os.execute("open -nF /Applications/iTerm.app")
+-- end
+--   )

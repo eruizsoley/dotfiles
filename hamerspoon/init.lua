@@ -37,9 +37,10 @@ win:moveToUnit(hs.layout.left70)
 end)
 
 local applicationHotkeys = {
-  b = 'Google Chrome',
+  g = 'Google Chrome',
   i = 'iTerm',
-  d = 'Simulator.app'
+  d = 'Simulator.app',
+  f = 'Finder',
 }
 for key, app in pairs(applicationHotkeys) do
   hs.hotkey.bind(hyper, key, function()
@@ -52,9 +53,4 @@ expose_app = hs.expose.new(nil,{onlyActiveApplication=true})
 expose_space = hs.expose.new(nil,{includeOtherSpaces=false})
 expose_browsers = hs.expose.new{'Safari','Google Chrome'}
 hs.hotkey.bind(hyper, "e", "Expose",function()expose:toggleShow()end)
-hs.hotkey.bind(hyper, "f", "App Expose",function()expose_app:toggleShow()end)
-
--- hs.hotkey.bind(hyper, "x", function()
---   os.execute("open -nF /Applications/iTerm.app")
--- end
---   )
+hs.hotkey.bind(hyper, "w", "App Expose",function()expose_app:toggleShow()end)

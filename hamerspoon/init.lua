@@ -1,5 +1,5 @@
 local hyper = { "cmd", "alt", "ctrl", "shift" }
-hs.hotkey.bind(hyper, "r", function()
+hs.hotkey.bind(hyper, "z", function()
   hs.reload()
 end)
 hs.notify.new({title="Hammerspoon", informativeText="Config loaded"}):send()

@@ -67,7 +67,7 @@ set cursorline
 set background=dark
 set t_Co=256
 set termguicolors
-colorscheme gruvbox
+colorscheme default
 
 " Set default vertical split to right
 set splitright

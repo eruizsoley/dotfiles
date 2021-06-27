@@ -64,10 +64,14 @@ set showmatch
 set cursorline
 
 " Set the colorscheme and window tansparency
-set background=dark
-set t_Co=256
-set termguicolors
-colorscheme default
+if &t_Co > 2
+    syntax on
+    colorscheme delek
+    highlight Pmenu        ctermfg=15   ctermbg=8
+    highlight PmenuSel     ctermfg=8    ctermbg=15
+    highlight StatusLine   ctermfg=15   ctermbg=8    cterm=bold
+    highlight StatusLineNC ctermfg=7    ctermbg=8    cterm=NONE
+endif
 
 " Set default vertical split to right
 set splitright
@@ -100,7 +104,6 @@ set numberwidth=1
 set relativenumber
 
 set wildmenu
-syntax on
 set encoding=utf-8
 set wrap
 set textwidth=79

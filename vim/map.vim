@@ -12,15 +12,15 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " vim-commentary
 
-nnoremap io :Commentary<CR>
-vnoremap io :Commentary<CR>
+nnoremap gc :Commentary<CR>
+vnoremap gc :Commentary<CR>
 
 nnoremap <CR> :noh<CR><CR>
 
-let mapleader = ";"
+let mapleader = ","
 nnoremap cc ciw
-map <leader>w :w<CR>
-map <leader>q :q<CR>
+map <leader>s :w<CR>
+map <leader>c :q<CR>
 map <leader>n :Lexplore<CR>
 
 map <leader>v :vsplit<CR>
@@ -30,9 +30,9 @@ nnoremap <C-o> 10<C-e>
 nnoremap <C-e> 10<C-y>
 
 nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <C-t> <C-w>j
+nnoremap <C-n> <C-w>k
+nnoremap <C-s> <C-w>l
 
 " Dual simbols
 inoremap " ""<left>
@@ -52,6 +52,6 @@ map <leader>dd :bdelete<CR>
 map <leader><TAB> :bNext<CR>
 nnoremap<space><space> :CtrlP<CR> 
 
-" nnoremap t j
-" nnoremap n k
-" nnoremap s l
+nnoremap t j
+nnoremap n k
+nnoremap s l

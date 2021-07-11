@@ -58,3 +58,15 @@ augroup END
 autocmd FileType netrw setl bufhidden=wipe
 " Freed <C-l> in Netrw
 nmap <leader><leader><leader><leader><leader><leader>l <Plug>NetrwRefresh
+
+" keymap for dvorak layout
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
+
+function! NetrwMapping()
+    nnoremap <buffer> t gj
+    nnoremap <buffer> n gk
+    nnoremap <buffer> s l
+endfunction

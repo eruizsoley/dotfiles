@@ -81,6 +81,7 @@ require('lazy').setup({
   },
 
   {
+    -- Transparent background
     'tribela/vim-transparent'
   },
 
@@ -131,6 +132,7 @@ require('lazy').setup({
   },
 
   {
+    -- Dash app
     'mrjones2014/dash.nvim',
     build = 'make install'
   },

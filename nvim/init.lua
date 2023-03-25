@@ -85,14 +85,6 @@ require('lazy').setup({
     'tribela/vim-transparent'
   },
 
-  -- {
-  --   'folke/tokyonight.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'tokyonight-night'
-  --   end,
-  -- },
-
 
   {
     -- Set lualine as statusline
@@ -135,6 +127,13 @@ require('lazy').setup({
     -- Dash app
     'mrjones2014/dash.nvim',
     build = 'make install'
+  },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    config = function()
+      vim.fn["mkdp#util#install"]()
+    end,
   },
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built.

@@ -120,7 +120,7 @@ require('lazy').setup({
     'nvim-telescope/telescope.nvim',
     version = '*',
     dependencies = { 'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim',
-      "kyazdani42/nvim-web-devicons", "nvim-telescope/telescope-file-browser.nvim" }
+      "kyazdani42/nvim-web-devicons", "nvim-telescope/telescope-file-browser.nvim", 'jvgrootveld/telescope-zoxide' }
   },
 
   {
@@ -257,6 +257,7 @@ require('telescope').setup {
 pcall(require('telescope').load_extension, 'fzf')
 pcall(require('telescope').load_extension, 'file_browser')
 pcall(require('telescope').load_extension, 'dash')
+pcall(require('telescope').load_extension, 'zoxide')
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
@@ -278,6 +279,7 @@ vim.keymap.set('n', '<leader>sk', require('telescope.builtin').keymaps, { desc =
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
 vim.keymap.set('n', '<leader>sb', ':Telescope file_browser<CR>', { desc = '[F]ile [B]rowser' })
 vim.keymap.set('n', '<leader>ss', ':Telescope dash search<CR>', { desc = '[D]ash [S]earch' })
+vim.keymap.set('n', '<leader>sz', ':Telescope zoxide list<CR>', { desc = '[F]ile [Z]oxide' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`

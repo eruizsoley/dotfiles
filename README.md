@@ -1,5 +1,7 @@
 # **Mis dotfiles**
 
+Configuracion de neovim y plugins
+
 Usa lazy como cargador de plugins de neovim, la terminal usada es warp para mac.
 
 ### Programas de terceros usados
@@ -7,6 +9,9 @@ Usa lazy como cargador de plugins de neovim, la terminal usada es warp para mac.
 - Lsd
 - Grep
 - Warp
+- Zoxide
+- Fzf
+- Raycast
 
 ### Keyboard config
 

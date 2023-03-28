@@ -225,6 +225,10 @@ vim.keymap.set({ 'n', 'v' }, 'cc', 'ciw', { silent = true })
 
 vim.keymap.set({ 'n', 'v' }, '<leader>io', ':Commentary<CR>', { desc = '[C]ommentary' })
 
+vim.keymap.set({ 'n', 'v' }, '<leader>lg', ':LazyGit<CR>', { desc = '[L]azygit' })
+
+vim.keymap.set({ 'n', 'v' }, '<leader>fo', ':FlutterOutlineToggle<CR>', { desc = '[F]lutter [O]utline' })
+
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -269,6 +273,34 @@ vim.keymap.set('n', '<leader>/', function()
     previewer = false,
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
+
+local wk = require("which-key")
+wk.register({
+  s = {
+    name = "Search"
+  },
+  w = {
+    name = 'Workspaces'
+  },
+  i = {
+    name = 'Commentary'
+  },
+  f = {
+    name = 'Flutter'
+  },
+  c = {
+    name = 'Code actions'
+  },
+  d = {
+    name = 'Documents lsp'
+  },
+  l = {
+    name = 'Lazygit'
+  },
+  r = {
+    name = 'Rename'
+  },
+}, { prefix = "<leader>" })
 
 vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })

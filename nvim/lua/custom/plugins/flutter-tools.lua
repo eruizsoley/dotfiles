@@ -1,7 +1,6 @@
 return {
 	"akinsho/flutter-tools.nvim",
 	event = "VeryLazy",
-	keys = { { "<leader>fo", ":FlutterOutlineToggle<cr>" } },
 	config = function()
 		require("flutter-tools").setup {
 			outline = { auto_open = false },

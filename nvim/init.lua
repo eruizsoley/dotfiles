@@ -23,9 +23,6 @@ require('lazy').setup({
   'tpope/vim-rhubarb',
   'tpope/vim-commentary',
 
-  -- Flutter tools
-  'akinsho/flutter-tools.nvim',
-
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
@@ -219,6 +216,10 @@ vim.opt.smartindent = true -- autoindent new lines
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
+vim.keymap.set({ 'n', 'v' }, '<leader>k', ':q<CR>', { silent = true })
+
+vim.keymap.set({ 'n', 'v' }, '<leader>s', ':w<CR>', { silent = true })
+
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 vim.keymap.set({ 'n', 'v' }, 'cc', 'ciw', { silent = true })
@@ -228,6 +229,13 @@ vim.keymap.set({ 'n', 'v' }, '<leader>io', ':Commentary<CR>', { desc = '[C]ommen
 vim.keymap.set({ 'n', 'v' }, '<leader>lg', ':LazyGit<CR>', { desc = '[L]azygit' })
 
 vim.keymap.set({ 'n', 'v' }, '<leader>fo', ':FlutterOutlineToggle<CR>', { desc = '[F]lutter [O]utline' })
+
+-- Better window navigation
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -510,5 +518,8 @@ wk.register({
   },
   r = {
     name = 'Rename'
+  },
+  k = {
+    name = 'Kill'
   },
 }, { prefix = "<leader>" })

@@ -204,7 +204,7 @@ vim.o.relativenumber = true
 -- Format end code
 vim.cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
 vim.cmd [[au BufWritePre * :%s/\s\+$//e]]
-vim.cmd [[au  BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 -- Ident format
 vim.opt.expandtab = true   -- use spaces instead of tabs
@@ -286,7 +286,7 @@ vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { des
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
-vim.keymap.set('n', '<leader>si', require('telescope.builtin').git_files, { desc = '[S]earch [G]it files' })
+vim.keymap.set('n', '<leader>si', require('telescope.builtin').git_files, { desc = '[S]earch by [G]it' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sk', require('telescope.builtin').keymaps, { desc = '[S]earch [K]eymaps' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
